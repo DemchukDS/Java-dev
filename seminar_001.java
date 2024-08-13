@@ -1,5 +1,6 @@
 import java.util.Calendar;
-import java.util.Date;
+import java.util.Scanner;
+import java.util.Random;
 
 public class seminar_001 {
     public static void main(String[] args) {
@@ -8,8 +9,8 @@ public class seminar_001 {
         // Получит введенную строку и выведет в консоль сообщение
         // “Привет, <Имя>!”
         
-        System.out.println("Enter your name:  ");
-        String name = scanner_class_string.scanner_class_string();
+        // System.out.println("Enter your name:  ");
+        // String name = scanner_class_string.scanner_class_string();
         
         //System.out.printf("Hello, %s!", name);
 
@@ -24,6 +25,33 @@ public class seminar_001 {
 
         //getGreetingsByTimesOfDay(name);
 
+
+
+        // Дан массив двоичных чисел, например [1,1,0,1,1,1], вывести
+        // максимальное количество подряд идущих 1.
+
+        System.out.print("Enter the numbers elements of array: ");
+        int[] array = new int[getIntNumber()];
+        System.out.println("Array generated: ");
+        for (int i = 0; i < array.length; i++) {
+            Random random = new Random();
+            int randomNumber = random.nextInt(2);
+            array[i] = randomNumber;
+            System.out.printf("%d ", array[i]);
+        }
+        int value = 0, maxValue = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != 0) {
+                value++;
+            } else {
+                if (maxValue < value) {
+                    maxValue = value;
+                }
+                value = 0;
+            }
+        }
+        System.out.println();
+        System.out.printf("The number of consecutive units is %d!", maxValue);
     }
     private static void getGreetingsByTimesOfDay(String name) {
         Calendar calendar = Calendar.getInstance();
@@ -39,5 +67,12 @@ public class seminar_001 {
         } else {
             System.out.printf("Good night, %s!", name);
         }
+    }
+
+    private static int getIntNumber(){
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        input.close();
+        return number;
     }
 }
