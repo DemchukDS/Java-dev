@@ -1,4 +1,4 @@
-public class HW_001 {
+public class HW_001_task1 {
     public static void main(String[] args) {
         // Tn = 1 + 2 + ... + n = ?
         System.out.print("Enter the number N: ");
