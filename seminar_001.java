@@ -10,9 +10,9 @@ public class seminar_001 {
         // “Привет, <Имя>!”
         
         // System.out.println("Enter your name:  ");
-        // String name = scanner_class_string.scanner_class_string();
+        // String name = ScannerUtil.enteString();
         
-        //System.out.printf("Hello, %s!", name);
+        // System.out.printf("Hello, %s!", name);
 
 
 
@@ -23,35 +23,17 @@ public class seminar_001 {
         // "Добрый вечер, <Имя>!", если время от 18:00 до 22:59;
         // "Доброй ночи, <Имя>!", если время от 23:00 до 4:59
 
-        //getGreetingsByTimesOfDay(name);
+        // getGreetingsByTimesOfDay(name);
 
 
 
         // Дан массив двоичных чисел, например [1,1,0,1,1,1], вывести
         // максимальное количество подряд идущих 1.
 
-        System.out.print("Enter the numbers elements of array: ");
-        int[] array = new int[getIntNumber()];
-        System.out.println("Array generated: ");
-        for (int i = 0; i < array.length; i++) {
-            Random random = new Random();
-            int randomNumber = random.nextInt(2);
-            array[i] = randomNumber;
-            System.out.printf("%d ", array[i]);
-        }
-        int value = 0, maxValue = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] != 0) {
-                value++;
-            } else {
-                if (maxValue < value) {
-                    maxValue = value;
-                }
-                value = 0;
-            }
-        }
-        System.out.println();
-        System.out.printf("The number of consecutive units is %d!", maxValue);
+        // System.out.print("Enter the numbers elements of array: ");
+        // int[] arrayForRandomBinaryNumbers = fillArrayForRandomBinaryNumbers();
+        // searchForSequence(arrayForRandomBinaryNumbers);
+        
     }
     private static void getGreetingsByTimesOfDay(String name) {
         Calendar calendar = Calendar.getInstance();
@@ -69,10 +51,31 @@ public class seminar_001 {
         }
     }
 
-    private static int getIntNumber(){
-        Scanner input = new Scanner(System.in);
-        int number = input.nextInt();
-        input.close();
-        return number;
+    private static int[] fillArrayForRandomBinaryNumbers() {
+        int[] array = new int[ScannerUtil.enterInteger()];
+        System.out.println("Array generated: ");
+        for (int i = 0; i < array.length; i++) {
+            Random random = new Random();
+            int randomNumber = random.nextInt(2);
+            array[i] = randomNumber;
+            System.out.printf("%d ", array[i]);
+        }
+        return array;
+    }
+
+    private static void searchForSequence(int array[]){
+        int value = 0, maxValue = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != 0) {
+                value++;
+            } else {
+                if (maxValue < value) {
+                    maxValue = value;
+                }
+                value = 0;
+            }
+        }
+        System.out.println();
+        System.out.printf("The number of consecutive units is %d!", maxValue);
     }
 }

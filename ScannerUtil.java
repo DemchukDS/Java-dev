@@ -8,6 +8,12 @@ public class ScannerUtil {
         return inputValue;
     }
 
+    public static String enteString() {
+        Scanner input = getInputValue();
+        String line = input.nextLine();
+        return line;
+    }
+
     public static int enterInteger() {
         Scanner input = getInputValue();
         int number = input.nextInt();
