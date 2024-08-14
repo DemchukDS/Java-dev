@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class seminar_002 {
     public static void main(String[] args) {
         
@@ -36,7 +40,16 @@ public class seminar_002 {
         // Напишите метод, который принимает на вход строку (String) и определяет является
         // ли строка палиндромом (возвращает boolean значение).
         
-        System.out.println(reverseString("Шалаш"));
+        // System.out.println(reverseString("Шалаш"));
+
+
+
+        // Напишите метод, который составит строку, состоящую из 100 повторений слова TEST и метод,
+        // который запишет эту строку в
+        // простой текстовый файл, обработайте исключения.
+
+        // wrighter();
+        
     }
 
     private static void checkCorrectEnteredNumber(int number, char sumbolOne, char sumbolTwo){
@@ -64,5 +77,24 @@ public class seminar_002 {
         StringBuilder result = new StringBuilder(sourse);
         String reversed = result.reverse().toString(); // меняет символы местами первый и последний и т.д.
         return sourse.equalsIgnoreCase(reversed);
+    }
+
+    public static String stringGenerator() {
+        StringBuilder temp = new StringBuilder();
+        for (int j = 0; j < 100; j++) {
+            temp.append("TEST ");
+        }
+        return temp.toString();
+    }
+
+    private static void wrighter() {
+        try {
+            FileWriter wrightToFile = new FileWriter("test.txt");
+            wrightToFile.write(stringGenerator());
+            wrightToFile.close();
+
+        } catch (IOException e) {
+            System.out.println("Ошибка!");
+        }
     }
 }
