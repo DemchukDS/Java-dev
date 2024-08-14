@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class seminar_002 {
     public static void main(String[] args) {
@@ -52,6 +53,8 @@ public class seminar_002 {
         
     }
 
+    private static final Logger LOGGER = Logger.getLogger("FourthTask");
+    
     private static void checkCorrectEnteredNumber(int number, char sumbolOne, char sumbolTwo){
         if (number <= 0) {
             System.out.println("Введенное число меньше либо равно 0, что не соответствует условию!");
@@ -80,10 +83,12 @@ public class seminar_002 {
     }
 
     public static String stringGenerator() {
+        LOGGER.info("Генерация строки");
         StringBuilder temp = new StringBuilder();
         for (int j = 0; j < 100; j++) {
             temp.append("TEST ");
         }
+        LOGGER.info("Генерация строки окончена!");
         return temp.toString();
     }
 
@@ -94,7 +99,7 @@ public class seminar_002 {
             wrightToFile.close();
 
         } catch (IOException e) {
-            System.out.println("Ошибка!");
+            LOGGER.severe("Ошибка при генерации файла" + e.getMessage());
         }
     }
 }
