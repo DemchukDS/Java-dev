@@ -24,8 +24,8 @@ public class seminar_002 {
     }
 
     private static void fillStringWithChar(int number, char sumbolOne, char sumbolTwo){
-        for (int i = 0; i < number; i++) {
-            if (i % 2 == 0) {
+        for (int i = 1; i < number + 1; i++) {
+            if (i % 2 == 1) {
                 System.out.print(sumbolOne);
             } else {
                 System.out.print(sumbolTwo);
