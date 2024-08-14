@@ -24,12 +24,14 @@ public class seminar_002 {
     }
 
     private static void fillStringWithChar(int number, char sumbolOne, char sumbolTwo){
+        StringBuilder result = new StringBuilder();
         for (int i = 1; i < number + 1; i++) {
             if (i % 2 == 1) {
-                System.out.print(sumbolOne);
+                result.append(sumbolOne);
             } else {
-                System.out.print(sumbolTwo);
+                result.append(sumbolTwo);
             }
         }
+        System.out.print(result);
     }
 }
