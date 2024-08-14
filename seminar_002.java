@@ -5,14 +5,32 @@ public class seminar_002 {
         // Написать метод, который вернет строку длины N, которая
         // состоит из чередующихся символов c1 и c2, начиная с c1.
 
-        System.out.print("Введите четное число N, которое больше нуля: ");
-        int numberN = ScannerUtil.enterInteger();
-        System.out.print("Введите первый символ: ");
-        char c1 = ScannerUtil.enterChar();
-        System.out.print("Введите второй символ: ");
-        char c2 = ScannerUtil.enterChar();
-        checkCorrectEnteredNumber(numberN, c1, c2);
-        fillStringWithChar(numberN, c1, c2);
+        // System.out.print("Введите четное число N, которое больше нуля: ");
+        // int numberN = ScannerUtil.enterInteger();
+        // System.out.print("Введите первый символ: ");
+        // char c1 = ScannerUtil.enterChar();
+        // System.out.print("Введите второй символ: ");
+        // char c2 = ScannerUtil.enterChar();
+        // checkCorrectEnteredNumber(numberN, c1, c2);
+        // fillStringWithChar(numberN, c1, c2);
+        // ScannerUtil.closeScanner();
+
+
+
+        // Напишите метод, который сжимает строку.
+        // Пример: вход aaaabbbcdd, выход: abcd
+
+        System.out.println("Введите строку элементов, которую необходимо скорректировать (удалить вподряд идущие дубли): ");
+        String myInputString = ScannerUtil.enteString();
+        StringBuilder result = new StringBuilder();
+        char[] array = myInputString.toCharArray();
+        for (int i = 0; i < array.length; i++) {
+            if (i == 0 || array[i] != array[i - 1]) {
+                result.append(array[i]);
+            }
+        }
+        System.out.println(result);
+
     }
     private static void checkCorrectEnteredNumber(int number, char sumbolOne, char sumbolTwo){
         if (number <= 0) {
@@ -33,4 +51,5 @@ public class seminar_002 {
         }
         System.out.print(result);
     }
+  
 }
