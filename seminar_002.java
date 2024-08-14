@@ -20,18 +20,25 @@ public class seminar_002 {
         // Напишите метод, который сжимает строку.
         // Пример: вход aaaabbbcdd, выход: abcd
 
-        System.out.println("Введите строку элементов, которую необходимо скорректировать (удалить вподряд идущие дубли): ");
-        String myInputString = ScannerUtil.enteString();
-        StringBuilder result = new StringBuilder();
-        char[] array = myInputString.toCharArray();
-        for (int i = 0; i < array.length; i++) {
-            if (i == 0 || array[i] != array[i - 1]) {
-                result.append(array[i]);
-            }
-        }
-        System.out.println(result);
+        // System.out.println("Введите строку элементов, которую необходимо скорректировать (удалить вподряд идущие дубли): ");
+        // String myInputString = ScannerUtil.enteString();
+        // StringBuilder result = new StringBuilder();
+        // char[] array = myInputString.toCharArray();
+        // for (int i = 0; i < array.length; i++) {
+        //     if (i == 0 || array[i] != array[i - 1]) {
+        //         result.append(array[i]);
+        //     }
+        // }
+        // System.out.println(result);
 
+
+        
+        // Напишите метод, который принимает на вход строку (String) и определяет является
+        // ли строка палиндромом (возвращает boolean значение).
+        
+        System.out.println(reverseString("Шалаш"));
     }
+
     private static void checkCorrectEnteredNumber(int number, char sumbolOne, char sumbolTwo){
         if (number <= 0) {
             System.out.println("Введенное число меньше либо равно 0, что не соответствует условию!");
@@ -51,5 +58,11 @@ public class seminar_002 {
         }
         System.out.print(result);
     }
-  
+
+    public static boolean reverseString(String myString) {
+        String sourse = myString.replaceAll(" ", ""); // Убирает пробелы
+        StringBuilder result = new StringBuilder(sourse);
+        String reversed = result.reverse().toString(); // меняет символы местами первый и последний и т.д.
+        return sourse.equalsIgnoreCase(reversed);
+    }
 }
