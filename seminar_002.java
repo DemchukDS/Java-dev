@@ -27,9 +27,8 @@ public class seminar_002 {
         StringBuilder result = new StringBuilder();
         for (int i = 1; i < number + 1; i++) {
             if (i % 2 == 1) {
-                result.append(sumbolOne);
-            } else {
-                result.append(sumbolTwo);
+                result.append(sumbolOne).append(sumbolTwo);
+                i++;
             }
         }
         System.out.print(result);
