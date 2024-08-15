@@ -5,18 +5,18 @@ public class lecture_003 {
     public static void main(String[] args) {
         // System.out.println(objExSum(31.1, 12.16));
         
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(93); // Добавляет элемент в конец массива
-        list.add(12);
-        list.add(64);
-        list.add(-7);
-        list.add(112);
-        list.set(3, null); // Меняет элемент массива под индексом ... 
-        list.remove(3); // Удаляет элемент массива под индексом ...
-        list.subList(2, 4); // Получает набор данных от указанного индекса до указанного.
-        for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i) + " ");
-        }
+        // ArrayList<Integer> list = new ArrayList<Integer>();
+        // list.add(93); // Добавляет элемент в конец массива
+        // list.add(12);
+        // list.add(64);
+        // list.add(-7);
+        // list.add(112);
+        // list.set(3, null); // Меняет элемент массива под индексом ... 
+        // list.remove(3); // Удаляет элемент массива под индексом ...
+        // list.subList(2, 4); // Получает набор данных от указанного индекса до указанного.
+        // for (int i = 0; i < list.size(); i++) {
+        //     System.out.print(list.get(i) + " ");
+        // }
     }
 
     private static Object objExSum(Object a, Object b) {
