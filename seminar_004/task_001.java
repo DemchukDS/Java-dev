@@ -25,8 +25,9 @@ public class task_001 {
 
         String[] text = string.split("~");
         int number = Integer.parseInt(text[1]);
+        number -= 1;
         LinkedList<String> tempLinkedList = new LinkedList<>();
-        for (int i = 0; i < number + 10; i++) {
+        for (int i = 0; i < number*2; i++) {
             tempLinkedList.add(null);
         }
         tempLinkedList.add(number, text[0]);
