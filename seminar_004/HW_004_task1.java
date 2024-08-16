@@ -18,6 +18,5 @@ public class HW_004_task1 {
             linkedList.set(linkedList.size() - i, temp);
         }
         System.out.println(linkedList);
-}
-
+    }
 }
