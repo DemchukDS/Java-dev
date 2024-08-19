@@ -29,7 +29,7 @@ public class task_001 {
         passportData.put(234432, "Ivanov");
         passportData.put(654321, "Petrova");
         passportData.put(345678, "Ivanov");
-
+        
         Scanner in = new Scanner(System.in);
         while (true) {
             String input = in.next();
@@ -39,19 +39,14 @@ public class task_001 {
             if ("q".equalsIgnoreCase(input)) {
                 System.exit(0);
             }
-            System.out.println(getByName(input));
-        }
-    }
-
-    public static List<Integer> getByName(String name) {
-        List<Integer> passportNumbers = new ArrayList<>();
-        Set<Map.Entry<Integer, String>> entries = passportData.entrySet();
-
-        for (Map.Entry<Integer, String> entry : entries) {
-            if (name.equalsIgnoreCase(entry.getValue())) {
-                passportNumbers.add(entry.getKey());
+            List<Integer> array = new ArrayList<>();
+            for (Integer keyNumber : passportData.keySet()) {
+                String newName = passportData.get(keyNumber);
+                if (newName.equalsIgnoreCase(input)) {
+                    array.add(keyNumber);
+                }
             }
+            System.out.println(array);
         }
-        return passportNumbers;
     }
 }
