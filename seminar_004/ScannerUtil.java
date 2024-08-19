@@ -1,4 +1,7 @@
+package seminar_004;
+
 import java.util.Scanner;
+
 public class ScannerUtil {
     private static Scanner inputValue;
     private static Scanner getInputValue() {
