@@ -24,12 +24,18 @@ public class task_001 {
         w4.id = 00000002;
 
         Worker w3 = new Worker();
-        w4.firstName = "Bogdan";
-        w4.lastName = "Savcuk";
-        w4.salery = 1617;
-        w4.id = 000000051;
+        w3.firstName = "Ivan";
+        w3.lastName = "Bulahov";
+        w3.salery = 1000;
+        w3.id = 00000001;
 
-        var workers = new HashSet<Worker>(Arrays.asList(w1, w2, w3, w4));
-        System.out.println(workers.contains(w4));
+        var workers = new HashSet<Worker>(Arrays.asList(w1, w2, w4));
+        System.out.println(w1);
+        System.out.println(w2);
+        System.out.println(w3);
+        System.out.println(w4);
+        System.out.println(workers.contains(w3));
+        System.out.println(w1 == w3);
+        System.out.println(w1.equals(w3));
     }
 }
