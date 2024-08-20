@@ -16,7 +16,7 @@ public class task_003 {
 
     public static Map<Character, Character> symbolBySymbol = new HashMap<>();
     public static void main(String[] args) {
-        String inputString = "{a+]}{(d*3)}";
+        String inputString = "({[][}]())";
 
         symbolBySymbol.put('}', '{');
         symbolBySymbol.put(']', '[');
