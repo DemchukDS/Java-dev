@@ -38,4 +38,4 @@ public class task_001 {
         System.out.println(w1 == w3);
         System.out.println(w1.equals(w3));
     }
-}
+}   
