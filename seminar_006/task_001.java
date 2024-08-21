@@ -45,8 +45,8 @@ public class task_001 {
     }
 
     public static int[] findArray(int[] array) {
+        Random randomNumber = new Random();
         for (int i = 0; i < array.length; i++) {
-            Random randomNumber = new Random();
             array[i] = randomNumber.nextInt(0, 25);
         }
         return array;
